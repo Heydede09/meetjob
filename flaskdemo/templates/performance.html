@@ -1,0 +1,55 @@
+{% extends 'BasePage.html' %}
+
+{% block pageTitle %}
+旅遊照片
+{% endblock %}
+
+{% block css %}
+	<link href="{{ url_for('static',filename='css/performance.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block mainContent %}
+
+
+
+<div class="iteminfo">
+	<div class="imginfo">
+		<img src="{{ url_for('static',filename='images/cc.jpg' ) }}">
+		<span>函館</span>
+	</div>
+	<div class="imginfo">
+		<img src="{{ url_for('static',filename='images/bb.jpg' ) }}">
+		<span>小樽運河</span>
+	</div>
+	<div class="imginfo">
+		<img src="{{ url_for('static',filename='images/pg.jpg' ) }}">
+		<span>尼克斯企鵝</span>
+	</div>
+	<div class="imginfo">
+		<img src="{{ url_for('static',filename='images/time.jpg' ) }}">
+		<span>計時台</span>
+	</div>
+
+</div>
+
+<div class="iteminfo">
+		<div class="imginfo">
+		<img src="{{ url_for('static',filename='images/ride.jpg' ) }}">
+		<span>單車</span>
+	</div>
+	<div class="imginfo">
+		<img src="{{ url_for('static',filename='images/snow.jpg' ) }}">
+		<span>雪景</span>
+	</div>
+	<div class="imginfo">
+		<img src="{{ url_for('static',filename='images/ss.jpg' ) }}">
+		<span>倉敷</span>
+	</div>
+	<div class="imginfo">
+		<img src="{{ url_for('static',filename='images/al.jpg' ) }}">
+		<span>阿里山</span>
+	</div>
+
+</div>
+
+{% endblock %}
