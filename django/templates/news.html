@@ -1,0 +1,50 @@
+{% extends 'BasePage.html' %}
+
+{% block Title %}
+新聞
+{% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" href="/static/css/news.css" />
+{% endblock %}
+
+{% block mainPage %}
+
+	{% for item in newsList %}
+
+		<div class="newsArea">
+
+			<div class="newsImg">
+				{% if item.photo|length > 10 %}
+					<img src="{{item.photo}}">
+				{% else %}
+					<img src="/static/images/pg.jpg">
+				{% endif %}
+			</div>
+			<div class="newsTitle">
+				<a href="{{item.link}}" target="_blank">{{item.title}}</a>
+			</div>
+
+		</div>
+
+	{% endfor %}
+
+
+	<div style="clear:both;height:60px;padding-top:100px;text-align: center;">
+
+		{% if newsList.has_previous %}
+
+			<a href="?page={{newsList.previous_page_number}}">上一頁</a>
+
+		{% endif %}
+
+		{% if newsList.has_next %}
+
+			<a href="?page={{newsList.next_page_number}}">下一頁</a>
+
+		{% endif %}
+
+	</div>
+
+
+{% endblock %}
