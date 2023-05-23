@@ -9,9 +9,8 @@ from time import sleep
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 
-usr=input("請輸入帳號(email或手機):") #usr="0920603248"
-pwd=input("請輸入密碼：")# pwd="nt49546132"
-driver=webdriver.Chrome()
+usr=input("請輸入帳號(email或手機):") 
+pwd=input("請輸入密碼：")
 driver.get("https://www.facebook.com/")
 print('opend facebook')
 sleep(2)
